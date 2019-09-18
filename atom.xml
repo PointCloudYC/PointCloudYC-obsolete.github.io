@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Chao&#39;s Personal Website</title>
+  
+  <subtitle>YIN Chao&#39;s Personal Website</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ychao.org/"/>
+  <updated>2019-09-18T13:22:38.091Z</updated>
+  <id>http://ychao.org/</id>
+  
+  <author>
+    <name>YIN Chao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>install ubuntu 18.04.01 on windows 10</title>
+    <link href="http://ychao.org/uncategorized/install-ubuntu-18-04-01-on-windows-10/"/>
+    <id>http://ychao.org/uncategorized/install-ubuntu-18-04-01-on-windows-10/</id>
+    <published>2019-09-18T12:42:30.000Z</published>
+    <updated>2019-09-18T13:22:38.091Z</updated>
+    
+    <content type="html"><![CDATA[<p>This post tries to record the basic steps and tricks on how to install ubuntu 18.04 on the existing windows 10. Then I will share some experience in setting up a decent working environment for deep learning research. </p><h2 id="install-ubuntu-18-04"><a href="#install-ubuntu-18-04" class="headerlink" title="install ubuntu 18.04"></a>install ubuntu 18.04</h2><h3 id="create-bootable-Ubuntu-USB"><a href="#create-bootable-Ubuntu-USB" class="headerlink" title="create bootable Ubuntu USB"></a>create bootable Ubuntu USB</h3><ul><li><p>Download Ubuntu 18.04 LTS from <a href="http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/" target="_blank" rel="noopener">CUHK FTP ubuntu-releases</a>. <strong>NOTE: try install Ubuntu 18.04.01 rather than other versions since when I install Ubuntu 18.04.02 I meet many problems when installing nvidia drivers. As a result, I waste many hours figuring out how install the driver on 18.04.02 but still in vain. So to avoid such pitfalls, install 18.04.01.</strong></p></li><li><p>Create bootable ubuntu usb using rufus on your windows; setting is as below.Note: Shrink a new drive for linux use(eg:100 G) ahead of time, on windows, use the disk management(win+x k) to shrink 30-200gb for linux.</p></li></ul><h3 id="install-Ubuntu-18-04"><a href="#install-Ubuntu-18-04" class="headerlink" title="install Ubuntu 18.04"></a>install Ubuntu 18.04</h3><p>I have tried to install dual OS on my 2 computers, one is on my HP Elite PC and another is the Lenovo X1 laptop. Both are sucessful.</p><ul><li><p>boot from usb;  press <code>esc</code>, enter <code>F9</code> to choose <code>UEFI- flash drive xxx</code> or <code>usb xxx</code>(not exited) option(Note: diff brands of PC have different hot keys, for your brand, replace the hot key w. your brands’);<del>if there is no that option, u need do the folowwing: a)restart comp,press <code>esc</code>,then press <code>f10</code>, b)then find the advanced setting, turn on the <code>enable legacy mode disable secure uefi</code>,save, c)continue the step1). choose <code>usb xxx</code>.</del>(no need to do that) </p></li><li><p>install ubuntu with disk settings; </p><ul><li>follow the guide to click next, but when setting up the partitions, remember to choose the <code>something else.</code> to start your customized disk settings, need assign root,swap, and home disk.</li><li><strong>IMPORTANT follow 5:53 of the <a href="https://www.youtube.com/watch?time_continue=5&v=u5QyjHIYwTQ" target="_blank" rel="noopener">youtube video</a></strong> to create partitions for root(eg: 20 gb for installation software), swap(eg: half of the ram sizes, eg: 16gb) and home( 80gb for code, other files).</li><li>set up your computer name and pwd.</li><li>enjoy your Ubuntu.</li></ul></li></ul><h2 id="setting-up-deep-learning-working-envrionment"><a href="#setting-up-deep-learning-working-envrionment" class="headerlink" title="setting up deep learning working envrionment"></a>setting up deep learning working envrionment</h2><p>use <code>ubuntu software</code> or <code>sudo apt-get install package_name</code> command to install your intended software.</p><h3 id="basic-software"><a href="#basic-software" class="headerlink" title="basic software"></a>basic software</h3><p>chromium,<br>teamviewer,<br>Double commander, (similar to total commander on windows)<br>copyQ, (simliar to ditto on windows)<br>pomodoro, (optional)<br>RDP and VNC (optional)</p><h3 id="coding"><a href="#coding" class="headerlink" title="coding"></a>coding</h3><p>git,</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt install git</span><br><span class="line"># set</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;youremail@domain.com&quot;</span><br><span class="line"># check the config</span><br><span class="line">vim~/.gitconfig</span><br></pre></td></tr></table></figure><p>VSC,<br>anaconda,<br>python3-pip,<br>virtualenv package,<br>neovim,<br>ssh, </p><h3 id="deep-leaerning-related"><a href="#deep-leaerning-related" class="headerlink" title="deep leaerning related"></a>deep leaerning related</h3><ul><li>install the <code>nividia driver 410</code> using <code>software &amp; updates</code>; open <code>software &amp; updates</code>, click <code>additional drivers</code>, check <code>nvidia xxx 410</code> option, click <code>apply changes</code>. <strong>Note: here i did not choose nvidia driver newest versions, because these new versions cannot support my nvidia gtx 1080 ver well. And 410 is proved to work very well according to other blogs.</strong></li><li>install <code>cuda toolkit10.0</code> (.deb)</li><li>install <code>cudnn 7.5</code></li><li>add cuda path to .bashrc and source it</li><li>create virtualenv or create anaconda env</li><li>install tf-gpu 1.13.2 and pytorch-gpu on isolated virtual envs.</li></ul><h3 id="other-advanced-software"><a href="#other-advanced-software" class="headerlink" title="other advanced software"></a>other advanced software</h3><p>cloudcompare</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># install w. snap</span><br><span class="line">sudo snap install cloudcompare </span><br><span class="line"></span><br><span class="line"># /snap/bin add to path var and source it</span><br><span class="line">vi ~/.bashrc </span><br><span class="line">`export PATH=/snap/bin:$PATH` # add, save</span><br><span class="line">source ~/.bashrc</span><br><span class="line"></span><br><span class="line"># add cloudcompare.CloudCompare to alias with cc</span><br><span class="line"># open .bash_aliases, add to aliases.</span><br><span class="line"># open cloudcompare</span><br><span class="line">cloudcompare.CloudCompare </span><br><span class="line">cc</span><br></pre></td></tr></table></figure><p>meshlab</p><p>PCL, for details check my <a href="install-pcl-on-ubuntu.md">install PCL 1.9 on Ubuntu 18.04</a> blog.</p><h2 id="tricks"><a href="#tricks" class="headerlink" title="tricks"></a>tricks</h2><h3 id="how-to-enable-my-2-OS-lauches-with-ease"><a href="#how-to-enable-my-2-OS-lauches-with-ease" class="headerlink" title="how to enable my 2 OS lauches with ease?"></a>how to enable my 2 OS lauches with ease?</h3><p>Previously, when rebooting my PC, there are no options for me to choose which OS to lauch.<br>For HP EliteDeskp PC, I found with the below settings, PC will provide a option for you to choose. No longer to enter BIOS to swtich to my windows 10.</p><ul><li>In BIOS, disenable the <code>fast boot</code> option.</li><li>enable secure boot.</li><li>set boot sequence, ubuntu then windows</li></ul><p>Now my HP desk can provide a option to choose wich os to enter when rebooting.</p><h2 id="update-history"><a href="#update-history" class="headerlink" title="update history"></a>update history</h2><p>18th,Sep,19  first draft</p><h1 id><a href="#" class="headerlink" title="========================"></a>========================</h1><h1 id="-1"><a href="#-1" class="headerlink" title="========================"></a>========================</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This post tries to record the basic steps and tricks on how to install ubuntu 18.04 on the existing windows 10. Then I will share some ex
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://ychao.org/uncategorized/hello-world/"/>
+    <id>http://ychao.org/uncategorized/hello-world/</id>
+    <published>2019-09-16T13:24:55.203Z</published>
+    <updated>2019-09-16T13:24:55.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
