@@ -22,7 +22,7 @@
     <meta name="description" content="this website belongs to YIN Chao (cyinac@connect.ust.hk), used to blog, display my professonal projects, academic infomation, CV, other things.">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PointCloudYC&#39;s Website</title>
+    <title>install ubuntu 18.04.01 on windows 10 · PointCloudYC&#39;s Website</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Chao&#39;s Website.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">install ubuntu 18.04.01 on windows 10</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Chao's Website.</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Chao's Website.
-            <!-- 文章页  -->
+            install ubuntu 18.04.01 on windows 10
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,43 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                Enjoy life, enjoy researching!
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">685</span>Reading time: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/09/18</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,135 +393,97 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/uncategorized/install-ubuntu-18-04-01-on-windows-10/" >
-            
-                <span>install ubuntu 18.04.01 on windows 10</span>
-        </a>
-        <div class="abstract-content">
-            This post tries to record the basic steps and tricks on how to install ubuntu 18.04 on the existing windows 10. Then I will share some experience in setting up a decent working environment for deep learning research. 
-install ubuntu 18.04create bootable Ubuntu USB
-Download Ubuntu 18.04 LTS from C...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/18</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/uncategorized/hello-world/" >
-            
-                <span>Hello World</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>This post tries to record the basic steps and tricks on how to install ubuntu 18.04 on the existing windows 10. Then I will share some experience in setting up a decent working environment for deep learning research. </p>
+<h2 id="install-ubuntu-18-04"><a href="#install-ubuntu-18-04" class="headerlink" title="install ubuntu 18.04"></a>install ubuntu 18.04</h2><h3 id="create-bootable-Ubuntu-USB"><a href="#create-bootable-Ubuntu-USB" class="headerlink" title="create bootable Ubuntu USB"></a>create bootable Ubuntu USB</h3><ul>
+<li><p>Download Ubuntu 18.04 LTS from <a href="http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/" target="_blank" rel="noopener">CUHK FTP ubuntu-releases</a>. <strong>NOTE: try install Ubuntu 18.04.01 rather than other versions since when I install Ubuntu 18.04.02 I meet many problems when installing nvidia drivers. As a result, I waste many hours figuring out how install the driver on 18.04.02 but still in vain. So to avoid such pitfalls, install 18.04.01.</strong></p>
+</li>
+<li><p>Create bootable ubuntu usb using rufus on your windows; setting is as below.Note: Shrink a new drive for linux use(eg:100 G) ahead of time, on windows, use the disk management(win+x k) to shrink 30-200gb for linux.</p>
+</li>
+</ul>
+<h3 id="install-Ubuntu-18-04"><a href="#install-Ubuntu-18-04" class="headerlink" title="install Ubuntu 18.04"></a>install Ubuntu 18.04</h3><p>I have tried to install dual OS on my 2 computers, one is on my HP Elite PC and another is the Lenovo X1 laptop. Both are sucessful.</p>
+<ul>
+<li><p>boot from usb;  press <code>esc</code>, enter <code>F9</code> to choose <code>UEFI- flash drive xxx</code> or <code>usb xxx</code>(not exited) option(Note: diff brands of PC have different hot keys, for your brand, replace the hot key w. your brands’);<del>if there is no that option, u need do the folowwing: a)restart comp,press <code>esc</code>,then press <code>f10</code>, b)then find the advanced setting, turn on the <code>enable legacy mode disable secure uefi</code>,save, c)continue the step1). choose <code>usb xxx</code>.</del>(no need to do that) </p>
+</li>
+<li><p>install ubuntu with disk settings; </p>
+<ul>
+<li>follow the guide to click next, but when setting up the partitions, remember to choose the <code>something else.</code> to start your customized disk settings, need assign root,swap, and home disk.</li>
+<li><strong>IMPORTANT follow 5:53 of the <a href="https://www.youtube.com/watch?time_continue=5&v=u5QyjHIYwTQ" target="_blank" rel="noopener">youtube video</a></strong> to create partitions for root(eg: 20 gb for installation software), swap(eg: half of the ram sizes, eg: 16gb) and home( 80gb for code, other files).</li>
+<li>set up your computer name and pwd.</li>
+<li>enjoy your Ubuntu.</li>
+</ul>
+</li>
+</ul>
+<h2 id="setting-up-deep-learning-working-envrionment"><a href="#setting-up-deep-learning-working-envrionment" class="headerlink" title="setting up deep learning working envrionment"></a>setting up deep learning working envrionment</h2><p>use <code>ubuntu software</code> or <code>sudo apt-get install package_name</code> command to install your intended software.</p>
+<h3 id="basic-software"><a href="#basic-software" class="headerlink" title="basic software"></a>basic software</h3><p>chromium,<br>teamviewer,<br>Double commander, (similar to total commander on windows)<br>copyQ, (simliar to ditto on windows)<br>pomodoro, (optional)<br>RDP and VNC (optional)</p>
+<h3 id="coding"><a href="#coding" class="headerlink" title="coding"></a>coding</h3><p>git,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt install git</span><br><span class="line"># set</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;youremail@domain.com&quot;</span><br><span class="line"># check the config</span><br><span class="line">vim~/.gitconfig</span><br></pre></td></tr></table></figure>
 
-More info: Writing
-Run server1$ hexo server
+<p>VSC,<br>anaconda,<br>python3-pip,<br>virtualenv package,<br>neovim,<br>ssh, </p>
+<h3 id="deep-leaerning-related"><a href="#deep-leaerning-related" class="headerlink" title="deep leaerning related"></a>deep leaerning related</h3><ul>
+<li>install the <code>nividia driver 410</code> using <code>software &amp; updates</code>; open <code>software &amp; updates</code>, click <code>additional drivers</code>, check <code>nvidia xxx 410</code> option, click <code>apply changes</code>. <strong>Note: here i did not choose nvidia driver newest versions, because these new versions cannot support my nvidia gtx 1080 ver well. And 410 is proved to work very well according to other blogs.</strong></li>
+<li>install <code>cuda toolkit10.0</code> (.deb)</li>
+<li>install <code>cudnn 7.5</code></li>
+<li>add cuda path to .bashrc and source it</li>
+<li>create virtualenv or create anaconda env</li>
+<li>install tf-gpu 1.13.2 and pytorch-gpu on isolated virtual envs.</li>
+</ul>
+<h3 id="other-advanced-software"><a href="#other-advanced-software" class="headerlink" title="other advanced software"></a>other advanced software</h3><p>cloudcompare</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># install w. snap</span><br><span class="line">sudo snap install cloudcompare </span><br><span class="line"></span><br><span class="line"># /snap/bin add to path var and source it</span><br><span class="line">vi ~/.bashrc </span><br><span class="line">`export PATH=/snap/bin:$PATH` # add, save</span><br><span class="line">source ~/.bashrc</span><br><span class="line"></span><br><span class="line"># add cloudcompare.CloudCompare to alias with cc</span><br><span class="line"># open .bash_aliases, add to aliases.</span><br><span class="line"># open cloudcompare</span><br><span class="line">cloudcompare.CloudCompare </span><br><span class="line">cc</span><br></pre></td></tr></table></figure>
 
-Mo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/16</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+<p>meshlab</p>
+<p>PCL, for details check my <a href="install-pcl-on-ubuntu.md">install PCL 1.9 on Ubuntu 18.04</a> blog.</p>
+<h2 id="tricks"><a href="#tricks" class="headerlink" title="tricks"></a>tricks</h2><h3 id="how-to-enable-my-2-OS-lauches-with-ease"><a href="#how-to-enable-my-2-OS-lauches-with-ease" class="headerlink" title="how to enable my 2 OS lauches with ease?"></a>how to enable my 2 OS lauches with ease?</h3><p>Previously, when rebooting my PC, there are no options for me to choose which OS to lauch.<br>For HP EliteDeskp PC, I found with the below settings, PC will provide a option for you to choose. No longer to enter BIOS to swtich to my windows 10.</p>
+<ul>
+<li>In BIOS, disenable the <code>fast boot</code> option.</li>
+<li>enable secure boot.</li>
+<li>set boot sequence, ubuntu then windows</li>
+</ul>
+<p>Now my HP desk can provide a option to choose wich os to enter when rebooting.</p>
+<h2 id="post-update-history"><a href="#post-update-history" class="headerlink" title="post update history"></a>post update history</h2><p>18th,Sep,19  first draft</p>
+
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>Author：<a href="http://ychao.org">YIN Chao</a>
+            <p>original link：<a href="http://ychao.org/uncategorized/install-ubuntu-18-04-01-on-windows-10/">http://ychao.org/uncategorized/install-ubuntu-18-04-01-on-windows-10/</a>
+            <p>posted date：<a href="http://ychao.org/uncategorized/install-ubuntu-18-04-01-on-windows-10/">September 18th 2019, 8:42:30 pm</a>
+            <p>update data：<a href="http://ychao.org/uncategorized/install-ubuntu-18-04-01-on-windows-10/">September 18th 2019, 9:09:45 pm</a>
+            <p>copyright：This arcticle adopts <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">creative commons 4.0</a> as its license</p>
+        </div>
     
     <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/Misaka.jpg >
-    <div class="profile-name">PointCloudYC</div>
-    
-    <div class="profile-signature">
-        Stay hungray, stay foolish!
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+        </li>
+        <li class="previous">
             
-                <a href="mailto:cyinac@connect.ust.hk" class="iconfont-archer email" title=email ></a>
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/uncategorized/hello-world/" title= "Hello World">
+                    <div class="prevTitle">Hello World</div>
+                </a>
             
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
-            
-                <a href="//github.com/PointCloudYC" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
     
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -553,6 +557,24 @@ Mo...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#install-ubuntu-18-04"><span class="toc-number">1.</span> <span class="toc-text">install ubuntu 18.04</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#create-bootable-Ubuntu-USB"><span class="toc-number">1.1.</span> <span class="toc-text">create bootable Ubuntu USB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#install-Ubuntu-18-04"><span class="toc-number">1.2.</span> <span class="toc-text">install Ubuntu 18.04</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#setting-up-deep-learning-working-envrionment"><span class="toc-number">2.</span> <span class="toc-text">setting up deep learning working envrionment</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#basic-software"><span class="toc-number">2.1.</span> <span class="toc-text">basic software</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#coding"><span class="toc-number">2.2.</span> <span class="toc-text">coding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deep-leaerning-related"><span class="toc-number">2.3.</span> <span class="toc-text">deep leaerning related</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#other-advanced-software"><span class="toc-number">2.4.</span> <span class="toc-text">other advanced software</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tricks"><span class="toc-number">3.</span> <span class="toc-text">tricks</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-enable-my-2-OS-lauches-with-ease"><span class="toc-number">3.1.</span> <span class="toc-text">how to enable my 2 OS lauches with ease?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#post-update-history"><span class="toc-number">4.</span> <span class="toc-text">post update history</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -678,6 +700,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
